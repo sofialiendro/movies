@@ -24,8 +24,10 @@ const Peliculas = () => {
             {filtroPopularMovies.map(pelicula =>
           <InfoTarjeta
             key={pelicula.id}
+            id ={pelicula.id}
             image={pelicula.poster_path}
             title={pelicula.title}
+            type="movie"
 
           />
         )}
@@ -35,10 +37,14 @@ const Peliculas = () => {
             {filtroBestMovies.map(pelicula =>
           <InfoTarjeta
             key={pelicula.id}
+            id ={pelicula.id}
             image={pelicula.poster_path}
             title={pelicula.title}
+            type="movie"
 
           />
+         
+
         )}
           </div>
           <div className="NewMovies">
@@ -46,8 +52,10 @@ const Peliculas = () => {
             {filtroNewMovies.map(pelicula =>
           <InfoTarjeta
             key={pelicula.id}
+            id ={pelicula.id}
             image={pelicula.poster_path}
             title={pelicula.title}
+            type="movie"
 
           />
         )}
@@ -57,8 +65,10 @@ const Peliculas = () => {
             {filtroCinemaMovies.map(pelicula =>
           <InfoTarjeta
             key={pelicula.id}
+            id ={pelicula.id}
             image={pelicula.poster_path}
             title={pelicula.title}
+            type="movie"
 
           />
         )}

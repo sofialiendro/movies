@@ -1,28 +1,36 @@
 import useFetch from '../hooks/useFetch'
 import { URL_POPULAR_SERIES, URL_BEST_SERIES, URL_LIVE_NOW_SERIES, APIKEY } from '../utils/variables'
-import { determinarArray  } from '../utils/helpers'
+import { determinarArray } from '../utils/helpers'
 import InfoTarjeta from './InfoTarjeta'
-    
+
+
 
 const Series = () => {
 
-  const popularSeries = useFetch (`${URL_POPULAR_SERIES}api_key=${APIKEY}`)
-  const bestSeries= useFetch (`${URL_BEST_SERIES}api_key=${APIKEY}`)
-  const liveNowSeries = useFetch (`${URL_LIVE_NOW_SERIES}api_key=${APIKEY}`)
+  const popularSeries = useFetch(`${URL_POPULAR_SERIES}api_key=${APIKEY}`)
+  const bestSeries = useFetch(`${URL_BEST_SERIES}api_key=${APIKEY}`)
+  const liveNowSeries = useFetch(`${URL_LIVE_NOW_SERIES}api_key=${APIKEY}`)
 
-  const filtroPopularSeries = determinarArray (popularSeries)
-  const filtroBestSeries= determinarArray (bestSeries)
-  const filtroNewSeries = determinarArray (liveNowSeries)
-    return (
-        <section className="Series">
+  const filtroPopularSeries = determinarArray(popularSeries)
+  const filtroBestSeries = determinarArray(bestSeries)
+  const filtroNewSeries = determinarArray(liveNowSeries)
+
+
+ 
+  return (
+    <section className="Series">
+     
+      
           <div className="PopularSeries">
             <h2>Popular Series</h2>
             {filtroPopularSeries.map(serie =>
           <InfoTarjeta
             key={serie.id}
+            id ={serie.id}
             image={serie.poster_path}
-            name={serie.name}
-
+            title={serie.name}
+            type="tv"
+            
             />
             )}
             </div>
@@ -31,8 +39,11 @@ const Series = () => {
                 {filtroBestSeries.map(serie =>
             <InfoTarjeta
                 key={serie.id}
+                id ={serie.id}
                 image={serie.poster_path}
-                name={serie.name}
+                title={serie.name}
+                type="tv"
+       
 
             />
             )}
@@ -42,14 +53,21 @@ const Series = () => {
                 {filtroNewSeries.map(serie =>
             <InfoTarjeta
                 key={serie.id}
+                id ={serie.id}
                 image={serie.poster_path}
-                name={serie.name}
+                title={serie.name}
+                type="tv"
+             
 
             />
             )}
           </div>
-        </section>
-    )
+  
+    </section>
+
+  )
+
+
 }
 
 export default Series;

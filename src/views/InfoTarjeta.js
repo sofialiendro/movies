@@ -1,17 +1,17 @@
 import './InfoTarjeta.scss';
-import Button from 'react-bootstrap/Button'
 
-const InfoTarjeta = ({ title, image, id, handleClickDetalle, type}) => {
+import { Link} from 'react-router-dom';
+
+const InfoTarjeta = ({ id, image, title, type}) => {
     
-    const handleClick = () => {
-        handleClickDetalle(id,type)
-    }
 
     return (
-        <div className="InfoTarjeta">
-            <img src={`https://image.tmdb.org/t/p/w500${image}`}/>
-            <h3>{title}</h3>
-            <Button onClick={handleClick} variant="primary">ver detalle</Button>
+        <div className="InfoTarjeta"> 
+           <Link to={`/${type}/${id}`}>
+                <img src={`https://image.tmdb.org/t/p/w500${image}`}/>
+                <h3>{title}</h3>
+            </Link> 
+            
         </div>
     )
 }

@@ -46,6 +46,7 @@ const items = [
 ];
 
 const Carrusel = (props) => {
+  
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
 

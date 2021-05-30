@@ -1,7 +1,7 @@
 import './App.scss';
 import Home from './components/Home';
-import Carrusel from './components/Carrusel';
 import Peliculas from './views/Peliculas';
+import Detalle from './views/Detalle';
 import Series from './views/Series';
 import React from 'react';
 
@@ -26,6 +26,7 @@ const App = () => {
             </nav>
             <Switch>
               <Route exact path="/" component={Home} />
+              <Route exact path="/:type/:id" component={Detalle} />
               <Route exact path="/peliculas" component={Peliculas} />
               <Route exact path="/series" component={Series} />
             </Switch>
