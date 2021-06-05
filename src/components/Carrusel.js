@@ -10,38 +10,42 @@ import {
 } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
 const items = [
   {
     id: 1,
-    src: require('../img/b4gYVcl8pParX8AjkN90iQrWrWO.jpg'),
-    altText: 'Slide 1',
-    caption: 'Slide 1'
+    src: require('./img/b4gYVcl8pParX8AjkN90iQrWrWO.jpg'),
+    altText: 'The Unholy',
+    caption: "Alice, a young hearing-impaired girl who, after a supposed visitation from the Virgin Mary, is inexplicably able to hear, speak and heal the sick. As word spreads and people from near and far flock to witness her miracles, a disgraced journalist hoping to revive his career visits the small New England town to investigate. When terrifying events begin to happen all around, he starts to question if these phenomena are the works of the Virgin Mary or something much more sinister.",
+    header: "The Unholy"
   },
   {
     id: 2,
-    src: require('../img/nkayOAUBUu4mMvyNf9iHSUiPjF1.jpg'),
-    altText: 'Slide 2',
-    caption: 'Slide 2'
+    src: require('./img/nkayOAUBUu4mMvyNf9iHSUiPjF1.jpg'),
+    altText: 'Mortal Kombat',
+    caption: 'Washed-up MMA fighter Cole Young, unaware of his heritage, and hunted by Emperor Shang Tsungs best warrior, Sub-Zero, seeks out and trains with Earth greatest champions as he prepares to stand against the enemies of Outworld in a high stakes battle for the universe.',
+    header: "Mortal Kombat"
   },
   {
     id: 3,
-    src: require('../img/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg'),
-    altText: 'Slide 3',
-    caption: 'Slide 3'
+    src: require("./img/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg"),
+    altText: 'Godzilla vs. Kong',
+    caption: 'In a time when monsters walk the Earth, humanity’s fight for its future sets Godzilla and Kong on a collision course that will see the two most powerful forces of nature on the planet collide in a spectacular battle for the ages.',
+    header: "Godzilla vs. Kong"
     
   },
   {
     id: 4,
-    src: require('../img/rEm96ib0sPiZBADNKBHKBv5bve9.jpg'),
-    altText: 'Slide 4',
-    caption: 'Slide 4'
+    src: require('./img/rEm96ib0sPiZBADNKBHKBv5bve9.jpg'),
+    altText: 'Without Remorse',
+    caption: 'An elite Navy SEAL uncovers an international conspiracy while seeking justice for the murder of his pregnant wife.',
+    header: "Without Remorse"
   },
   {
     id: 5,
-    src: require('../img/x5o8cLZfEXMoZczTYWLrUo1P7UJ.jpg'),
-    altText: 'Slide 5',
-    caption: 'Slide 5'
+    src: require('./img/x5o8cLZfEXMoZczTYWLrUo1P7UJ.jpg'),
+    altText: "Gabriel's Inferno Part II",
+    caption: "Professor Gabriel Emerson finally learns the truth about Julia Mitchell's identity, but his realization comes a moment too late. Julia is done waiting for the well-respected Dante specialist to remember her and wants nothing more to do with him. Can Gabriel win back her heart before she finds love in another's arms?",
+    header: "Gabriel's Inferno Part II"
   }
 ];
 
@@ -76,8 +80,8 @@ const Carrusel = (props) => {
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
       >
-        <img src={item.src} alt={item.altText} width="100%" height="100%" />
-        <CarouselCaption className="text-danger" captionText={item.caption} captionHeader={item.caption} />
+        <img src={item.src} alt={item.altText} width="100px" height="70px" />
+        <CarouselCaption className="text-danger" captionText={item.caption} captionHeader={item.header} />
       </CarouselItem>
     );
   });

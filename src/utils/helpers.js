@@ -1,3 +1,3 @@
 export const determinarArray = (array) => {
-   return array.slice(0, 5)
+   return array.slice(0, 10)
 }

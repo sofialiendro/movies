@@ -2,7 +2,7 @@ import InfoTarjeta from './InfoTarjeta'
 import useFetch from '../hooks/useFetch'
 import { URL_POPULAR_MOVIES, URL_BEST_MOVIES, URL_NEW_MOVIES, URL_CINEMA_MOVIES, APIKEY } from '../utils/variables'
 import { determinarArray  } from '../utils/helpers'
-    
+import Grid from '@material-ui/core/Grid';
 
 const Peliculas = () => {
 
@@ -20,26 +20,28 @@ const Peliculas = () => {
     return (
         <section className="Peliculas">
           <div className="PeliculasPopulares">
+         
             <h2>Popular Movies</h2>
             {filtroPopularMovies.map(pelicula =>
-          <InfoTarjeta
-            key={pelicula.id}
-            id ={pelicula.id}
-            image={pelicula.poster_path}
-            title={pelicula.title}
-            type="movie"
+          
+            <InfoTarjeta
+              key={pelicula.id}
+              id ={pelicula.id}
+              image={pelicula.poster_path}
+              title={pelicula.title}
+              type="movie"
 
-          />
+            />
         )}
           </div>
           <div className="BestMovies">
             <h2>Best Movies</h2>
-            {filtroBestMovies.map(pelicula =>
+            {filtroBestMovies.map(mejorPelicula =>
           <InfoTarjeta
-            key={pelicula.id}
-            id ={pelicula.id}
-            image={pelicula.poster_path}
-            title={pelicula.title}
+            key={mejorPelicula.id}
+            id ={mejorPelicula.id}
+            image={mejorPelicula.poster_path}
+            title={mejorPelicula.title}
             type="movie"
 
           />
