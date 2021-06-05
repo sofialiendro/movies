@@ -1,6 +1,8 @@
 import './App.scss';
 import Home from './components/Home';
-import Peliculas from './views/Peliculas';
+import Latest from './components/Latest';
+import Popular from './components/Popular';
+import Peliculas from './views/Movies';
 import Detalle from './views/Detalle';
 import Series from './views/Series';
 import React from 'react';
@@ -93,9 +95,8 @@ const App = () => {
           <BrowserRouter>
               <Toolbar className="navegation"> 
                 <Typography ><Link exact to="/" >Home</Link></Typography>
-                <Typography><Link to="/Peliculas">Movies</Link></Typography>
-                <Typography><Link to="/UltimosLanzamientos">Latest</Link></Typography>
-                <Typography><Link to="/Series">Series</Link></Typography>
+                <Typography><Link to="/Latest">Latest</Link></Typography>
+                <Typography><Link to="/Popular">Popular</Link></Typography>
 
               </Toolbar>
 
@@ -122,6 +123,8 @@ const App = () => {
            
             <Switch>
               <Route exact path="/" component={Home} />
+              <Route exact path="/Latest" component={Latest} />
+              <Route exact path="/Popular" component={Popular} />
               <Route exact path="/:type/:id" component={Detalle} />
              
                 <Route exact path="/peliculas" component={Peliculas} />
