@@ -82,59 +82,62 @@ const App = () => {
 
   return (
     <div className="App">
+      <BrowserRouter>
       <div className="Nav">
       <div className={classes.root}>
-      <AppBar position="static" >
-        <Toolbar>
-          <Typography className={classes.title} variant="h6" noWrap>
-            Movie Finder
-          </Typography>
-          <Typography className={classes.title} variant="h6" noWrap>
-          <BrowserRouter>
-              <Toolbar className="navegation"> 
-                <Typography ><Link exact to="/" >Home</Link></Typography>
-                <Typography><Link to="/Latest">Latest</Link></Typography>
-                <Typography><Link to="/Popular">Popular</Link></Typography>
+        
+          <AppBar position="static" >
+            <Toolbar>
+              <Typography className={classes.title} variant="h6" noWrap>
+                Movie Finder
+              </Typography>
+              <Typography className={classes.title} variant="h6" noWrap>
+              
+                  <Toolbar className="navegation"> 
+                    <Typography ><Link exact to="/" >Home</Link></Typography>
+                    <Typography><Link to="/Latest">Latest</Link></Typography>
+                    <Typography><Link to="/Popular">Popular</Link></Typography>
 
-              </Toolbar>
+                  </Toolbar>
 
-            </BrowserRouter>
-          </Typography>
-          <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
-            </div>
-            <InputBase
-              placeholder="Search…"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </div>
-        </Toolbar>
-      </AppBar>
-    </div>
-        <>
-          <BrowserRouter>
-           
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/Latest" component={Latest} />
-              <Route exact path="/Popular" component={Popular} />
-              <Route exact path="/:type/:id" component={Detalle} />
-             
-                <Route exact path="/peliculas" component={Peliculas} />
-                <Route exact path="/series" component={Series} />
+              
+              </Typography>
+              <div className={classes.search}>
+                <div className={classes.searchIcon}>
+                  <SearchIcon />
+                </div>
+                <InputBase
+                  placeholder="Search…"
+                  classes={{
+                    root: classes.inputRoot,
+                    input: classes.inputInput,
+                  }}
+                  inputProps={{ 'aria-label': 'search' }}
+                />
+              </div>
+            </Toolbar>
+          </AppBar>
+      
+         
+            
+            
+              <Switch>
+                <Route exact path="/" component={Home} />
+                <Route exact path="/Latest" component={Latest} />
+                <Route exact path="/Popular" component={Popular} />
+                <Route exact path="/:type/:id" component={Detalle} />
+              
+                  <Route exact path="/peliculas" component={Peliculas} />
+                  <Route exact path="/series" component={Series} />
 
-            </Switch>
-          </BrowserRouter>
+              </Switch>
+        
 
-        </>
-
+        
 
       </div>
+      </div>
+      </BrowserRouter>
     </div>
   );
 }

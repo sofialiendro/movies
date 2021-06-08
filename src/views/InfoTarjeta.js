@@ -2,6 +2,7 @@ import './InfoTarjeta.scss';
 
 import { Link} from 'react-router-dom';
 
+
 const InfoTarjeta = ({ id, image, title, type}) => {
     
 
