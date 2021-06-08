@@ -13,8 +13,6 @@ import InputBase from '@material-ui/core/InputBase';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import SearchIcon from '@material-ui/icons/Search';
 import AppBar from '@material-ui/core/AppBar';
-
-
 import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 import { Navbar } from 'reactstrap';
 
