@@ -47,6 +47,7 @@ const Popular = () => {
         <h1>Popular Movies</h1>
         {filtroPeliculasPopulares.map(peliculaPopular =>
           <InfoTarjeta
+            viewType='InfoTarjeta'
             key={peliculaPopular.id}
             id ={peliculaPopular.id}
             image={peliculaPopular.poster_path}

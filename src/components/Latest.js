@@ -47,6 +47,7 @@ const Latest = () => {
         <h1>Latest Movies</h1>
         {filtroPeliculasNuevas.map(peliculaNueva =>
           <InfoTarjeta
+            viewType='InfoTarjeta'
             key={peliculaNueva.id}
             id ={peliculaNueva.id}
             image={peliculaNueva.poster_path}

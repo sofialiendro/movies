@@ -25,6 +25,7 @@ const Series = () => {
             <h2>Popular Series</h2>
             {filtroPopularSeries.map(serie =>
           <InfoTarjeta
+          viewType='InfoTarjeta'
             key={serie.id}
             id ={serie.id}
             image={serie.poster_path}
@@ -38,6 +39,7 @@ const Series = () => {
                 <h2>Best Series</h2>
                 {filtroBestSeries.map(serie =>
             <InfoTarjeta
+            viewType='InfoTarjeta'
                 key={serie.id}
                 id ={serie.id}
                 image={serie.poster_path}
@@ -52,6 +54,7 @@ const Series = () => {
                 <h2>New Series</h2>
                 {filtroNewSeries.map(serie =>
             <InfoTarjeta
+            viewType='InfoTarjeta'
                 key={serie.id}
                 id ={serie.id}
                 image={serie.poster_path}

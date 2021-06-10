@@ -1,6 +1,7 @@
 import { useParams} from 'react-router-dom'
 import { useState, useEffect } from "react"
 import { APIKEY } from '../utils/variables'
+import {makeStyles} from '@material-ui/core/styles'
 
 const Detalle= () => {
     
@@ -13,10 +14,21 @@ const Detalle= () => {
             .then(data => setProducto(data))
           
     }, [])
+    
     console.log(producto)
 
+    const imagenFondo =`https://image.tmdb.org/t/p/w500${producto.backdrop_path}`
+    const useStyles=makeStyles((theme)=>({
+        principal:{
+            backgroundImage: `url(${imagenFondo})`,
+            height:'100vh',
+        },
+    
+        }));
+      const classes=useStyles();
+
     return (
-        <div>
+        <div className={classes.principal}>
             <img src={`https://image.tmdb.org/t/p/w500${producto.poster_path}`}/>
             {params.type === 'movie' ? <h2>{producto.title}</h2> : <h2>{producto.name}</h2> }
             <p>{producto.overview}</p>

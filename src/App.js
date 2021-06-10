@@ -1,4 +1,4 @@
-import './App.scss';
+
 import Home from './components/Home';
 import Latest from './components/Latest';
 import Popular from './components/Popular';
@@ -24,69 +24,89 @@ const App = () => {
 
   const useStyles = makeStyles((theme) => ({
     root: {
-      
+
       flexGrow: 1,
+    },
+    navegation: {
+      display: 'flex',
+      justifyContent: 'flex-end',
+    },
+    navLink: {
+      marginRight: theme.spacing(2),
+      color: 'black',
+      fontWeight: 'bold',
+      textDecoration: 'none',
+      '&:hover': {
+        color: "white",
+      },
+
     },
     menuButton: {
       marginRight: theme.spacing(2),
     },
     title: {
-      
+
       flexGrow: 1,
       display: 'none',
       [theme.breakpoints.up('sm')]: {
         display: 'block',
       },
+
     },
+    navLinkTitle: {
+      textDecoration: 'none',
+      color:'white'
+    },
+
   }));
   const classes = useStyles();
 
   return (
     <div className="App">
       <BrowserRouter>
-      <div className="Nav">
-      <div className={classes.root}>
-        
-          <AppBar position="static" >
-            <Toolbar>
-              <Typography className={classes.title} variant="h6" noWrap>
-                Movie Finder
-              </Typography>
-              <Typography className={classes.title} variant="h6" noWrap>
-              
-                  <Toolbar className="navegation"> 
-                    <Typography ><Link exact to="/" >Home</Link></Typography>
-                    <Typography><Link to="/Latest">Latest</Link></Typography>
-                    <Typography><Link to="/Popular">Popular</Link></Typography>
-                    <Typography><Link to="/Search">Search</Link></Typography>
+        <div className="Nav">
+          <div className={classes.root}>
+
+            <AppBar position="static" >
+              <Toolbar>
+                <Typography className={classes.title} variant="h6" noWrap>
+                  <Link className={classes.navLinkTitle} exact to="/" >Movie Finder</Link>
+                </Typography>
+                <Typography className={classes.title} variant="h6" noWrap>
+
+                  <Toolbar className={classes.navegation}>
+                    <Typography ><Link className={classes.navLink} exact to="/" >Home</Link></Typography>
+                    <Typography><Link className={classes.navLink} to="/Latest">Latest</Link></Typography>
+                    <Typography><Link className={classes.navLink} to="/Popular">Popular</Link></Typography>
+                    <Typography><Link className={classes.navLink} to="/Search">Search</Link></Typography>
 
                   </Toolbar>
 
-              
-              </Typography>
-              
-            </Toolbar>
-          </AppBar>
-      
-         
-            
-            
-              <Switch>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/Latest" component={Latest} />
-                <Route exact path="/Popular" component={Popular} />
-                <Route exact path="/:type/:id" component={Detalle} />
-                <Route exact path="/Search" component={Search} />
 
-      
+                </Typography>
 
-              </Switch>
-        
+              </Toolbar>
+            </AppBar>
 
-        
 
-      </div>
-      </div>
+
+
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/Latest" component={Latest} />
+              <Route exact path="/Popular" component={Popular} />
+              <Route exact path="/:type/:id" component={Detalle} />
+              <Route exact path="/Search" component={Search} />
+
+
+
+            </Switch>
+
+
+
+
+          </div>
+        </div>
       </BrowserRouter>
     </div>
   );
