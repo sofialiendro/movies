@@ -38,9 +38,19 @@ const Home = () => {
         setLatest(data.results);
       });
   }, []);
+
   const useStyles=makeStyles((theme)=>({
     text:{
         color:"#ffffff"
+    },
+    content:{
+      display:'flex',
+      justifyContent:'space-evenly',
+      marginTop:'5%'
+    },
+    title:{
+      margin:'10px',
+      textAlign:'center',
     }
     }));
   const classes=useStyles();
@@ -50,12 +60,13 @@ const Home = () => {
       
       <Carousel movieInfo={latest} />
       
-        
-          <section className="sectionMovie">
+        <div className={classes.content}>
+          <section>
           
-            <h1>Popular Movies</h1>
+            <h1 className={classes.title}>Popular Movies</h1>
             {filtroPeliculas.map(pelicula =>
               <InfoTarjeta
+                viewType='InfoTarjetaHome'
                 key={pelicula.id}
                 id ={pelicula.id}
                 image={pelicula.poster_path}
@@ -68,11 +79,12 @@ const Home = () => {
           </section>
         
       
-      <section className="sectionTv">
+      <section>
       
-        <h1>Best Movies</h1>
+        <h1 className={classes.title}>Best Movies</h1>
         {filtroMejoresPeliculas.map(mejorPelicula =>
           <InfoTarjeta
+            viewType='InfoTarjetaHome'
             key={mejorPelicula.id}
             id ={mejorPelicula.id}
             image={mejorPelicula.poster_path}
@@ -82,6 +94,8 @@ const Home = () => {
           />
         )}
       </section>
+      </div>
+
       
       <Box bgcolor="#3f51b5" maxWidth="100%" height="100px" justify="center">
         <Typography align="center" className={classes.text} variant="h5">

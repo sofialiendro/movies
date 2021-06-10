@@ -46,6 +46,7 @@ const Search = () => {
                 
                 {peliculas.map(pelicula =>
                     <InfoTarjeta
+                    viewType='InfoTarjeta'
                         key={pelicula.id}
                         id={pelicula.id}
                         image={pelicula.poster_path}

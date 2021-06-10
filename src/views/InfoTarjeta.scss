@@ -8,3 +8,49 @@
         height: 80%;
     }
 }
+
+.InfoTarjetaHome{
+
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    
+    background-color: rgb(199, 191, 191);
+    width: 400px;    
+    height: 100px;
+    margin: 10px;
+    .imagenTarjeta{
+        margin-left: 5px;
+        width: 15%;
+        padding: 20px;
+        .img {
+            width: 100%;
+            border-radius: 100%;
+        }
+
+    }
+    .tituloTarjeta{
+        width: 60%;
+        font-size:14px;
+
+        
+    }
+
+    .iconoTarjeta{
+        margin-right:20px;
+
+    }
+
+    .link{
+        color: #3f51b5;
+        text-decoration: none;
+
+    }
+
+    .link:hover{
+        color:blue;
+    }
+ 
+
+}
