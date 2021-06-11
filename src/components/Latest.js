@@ -29,22 +29,21 @@ const Latest = () => {
   const useStyles=makeStyles((theme)=>({
     text:{
         color:"#ffffff"
-    }
+    }, 
+    sectionLatest:{
+      display:'flex',
+      flexWrap:'wrap',
+      justifyContent:'space-between',
+      alignItems:'center'
+    },
+
     }));
   const classes=useStyles();
 
   return (
     <div className="Home">
-      
-      
-
-      
-      
-        
-      
-      <section className="sectionTv">
-      
-        <h1>Latest Movies</h1>
+      <h1>Latest Movies</h1>
+      <section className={classes.sectionLatest}>
         {filtroPeliculasNuevas.map(peliculaNueva =>
           <InfoTarjeta
             viewType='InfoTarjeta'

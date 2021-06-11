@@ -29,22 +29,23 @@ const Popular = () => {
   const useStyles=makeStyles((theme)=>({
     text:{
         color:"#ffffff"
-    }
+    },
+    sectionPopular:{
+      display:'flex',
+      flexWrap:'wrap',
+      justifyContent:'space-between',
+      alignItems:'center'
+    },
+
     }));
   const classes=useStyles();
 
   return (
     <div className="Home">
       
-      
-
-      
-      
-        
-      
-      <section className="sectionTv">
-      
-        <h1>Popular Movies</h1>
+      <h1>Popular Movies</h1>
+      <section className={classes.sectionPopular}>
+    
         {filtroPeliculasPopulares.map(peliculaPopular =>
           <InfoTarjeta
             viewType='InfoTarjeta'
