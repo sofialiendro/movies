@@ -1,10 +1,69 @@
 .InfoTarjeta {
-    background-color: pink;
-    width: 250px;    
-    height: 400px;
+    background-color: rgb(199, 191, 191);
+    text-align: center;
+    width: 280px;    
+    height: 450px;
     margin: 10px;
+    font-size: 15px;
     img {
         width: 100%;
-        height: 80%;
+        height: 75%;
     }
+    .link{
+        color: #3f51b5;
+        text-decoration: none;
+
+    }
+
+    .link:hover{
+        color:blue;
+    }
+
+    
+}
+
+.InfoTarjetaHome{
+
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    
+    background-color: rgb(199, 191, 191);
+    width: 400px;    
+    height: 100px;
+    margin: 10px;
+    .imagenTarjeta{
+        margin-left: 5px;
+        width: 15%;
+        padding: 20px;
+        .img {
+            width: 100%;
+            border-radius: 100%;
+        }
+
+    }
+    .tituloTarjeta{
+        width: 60%;
+        font-size:14px;
+
+        
+    }
+
+    .iconoTarjeta{
+        margin-right:20px;
+
+    }
+
+    .link{
+        color: #3f51b5;
+        text-decoration: none;
+
+    }
+
+    .link:hover{
+        color:blue;
+    }
+ 
+
 }
