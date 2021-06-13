@@ -10,10 +10,13 @@ const InfoTarjeta = ({ id, image, title, type, viewType}) => {
         <>
             {viewType==='InfoTarjeta'?
                 <div className='InfoTarjeta'>
-                    <Link to={`/${type}/${id}`}>
+                    <Link className="link" to={`/${type}/${id}`}>
                         <img src={`https://image.tmdb.org/t/p/w500${image}`}/>
                         <h3>{title}</h3>
+                        <VisibilityOutlinedIcon/>
                     </Link> 
+                
+   
                 </div>
                 
                 :
