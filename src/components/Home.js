@@ -10,7 +10,6 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Carousel from './Carrusel';
 import {makeStyles} from '@material-ui/core/styles'
-import Grid from '@material-ui/core/Grid';
 import { useEffect, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
