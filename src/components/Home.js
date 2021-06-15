@@ -55,9 +55,7 @@ const Home = () => {
       justifyContent:'space-evenly',
       marginTop:'5%',
       flexWrap:"wrap",
-      "@media (max-width: 578px)": {
-       
-      }
+    
     },
     title:{
      

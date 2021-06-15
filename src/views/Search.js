@@ -3,10 +3,8 @@ import SearchInput from '../components/SearchInput';
 import InfoTarjeta from './InfoTarjeta';
 import React, { useState, useEffect } from 'react';
 import {makeStyles} from '@material-ui/core/styles';
-
 import { APIKEY } from '../utils/variables'
-import { CallMissedSharp } from '@material-ui/icons';
-import { mergeClasses } from '@material-ui/styles';
+
 
 
 const Search = () => {

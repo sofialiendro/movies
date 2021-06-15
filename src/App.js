@@ -2,13 +2,11 @@
 import Home from './components/Home';
 import Latest from './components/Latest';
 import Popular from './components/Popular';
-import Peliculas from './views/Movies';
+
 import Detalle from './views/Detalle';
-import Series from './views/Series';
 import Search from './views/Search';
 import React from 'react';
 import Toolbar from '@material-ui/core/Toolbar';
-
 import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
 import { fade, makeStyles } from '@material-ui/core/styles';
