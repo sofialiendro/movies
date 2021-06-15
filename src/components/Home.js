@@ -50,7 +50,7 @@ const Home = () => {
 
     },
     title: {
-
+      color:"white",
       textAlign: 'center',
     }
   }));
