@@ -41,15 +41,26 @@ const Home = () => {
 
   const useStyles=makeStyles((theme)=>({
     text:{
-        color:"#ffffff"
+        color:"#ffffff",
+        padding:"1%",
+        textAlign:"center",
+        fontSize:"25px",
+
+        "@media (max-width: 300px)": {
+          fontSize:"20px"
+        }
     },
     content:{
       display:'flex',
       justifyContent:'space-evenly',
-      marginTop:'5%'
+      marginTop:'5%',
+      flexWrap:"wrap",
+      "@media (max-width: 578px)": {
+       
+      }
     },
     title:{
-      margin:'10px',
+     
       textAlign:'center',
     }
     }));
@@ -97,8 +108,8 @@ const Home = () => {
       </div>
 
       
-      <Box bgcolor="#3f51b5" maxWidth="100%" height="100px" justify="center">
-        <Typography align="center" className={classes.text} variant="h5">
+      <Box bgcolor="#ff0000" maxWidth="100%" height="100px" textAlign="center">
+        <Typography className={classes.text} >
             Movie Finder by Euge and Sofi
         </Typography>
       </Box>
