@@ -37,11 +37,9 @@ const Home = () => {
     text: {
       color: "#ffffff",
       padding: "1%",
-      textAlign: "center",
       fontSize: "25px",
-
-      "@media (max-width: 300px)": {
-        fontSize: "20px"
+    "@media (max-width: 360px)": {
+        fontSize: "15px"
       }
     },
     content: {
@@ -99,7 +97,7 @@ const Home = () => {
       </div>
 
 
-      <Box bgcolor="#ff0000" maxWidth="100%" height="100px" textAlign="center">
+      <Box bgcolor="#ff0000" maxWidth="100%" height="100px"  display="flex" justifyContent="center" alignItems="center">
         <Typography className={classes.text} >
           Movie Finder by Euge and Sofi
         </Typography>

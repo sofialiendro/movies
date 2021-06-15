@@ -39,7 +39,7 @@ const App = () => {
         color: "white",
       },
       "@media (max-width: 300px)": {
-        fontSize: "10px",
+        fontSize: "11px",
 
 
       },
@@ -52,9 +52,7 @@ const App = () => {
       marginRight: theme.spacing(2),
     },
     title: {
-
       flexGrow: 1,
-
       [theme.breakpoints.up('sm')]: {
         display: 'block',
       },
