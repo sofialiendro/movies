@@ -66,7 +66,12 @@ const App = () => {
     navLinkTitle: {
       textDecoration: 'none',
       color: 'white',
-      fontWeight: "bolder"
+      fontWeight: "bolder",
+      fontSize:"30px",
+      "@media (max-width: 578px)": {
+        fontSize: "15px",
+
+      },
 
     },
 
