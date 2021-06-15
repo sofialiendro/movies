@@ -1,5 +1,6 @@
 .InfoTarjeta {
-    background-color: rgb(199, 191, 191);
+    border: 1px solid gold ;
+    background-color:black;
     text-align: center;
     width: 280px;    
     height: 450px;
@@ -9,15 +10,16 @@
     img {
         width: 100%;
         height: 75%;
+        border: 1px solid gold ;
     }
     .link{
-        color: #3f51b5;
+        color:white;
         text-decoration: none;
 
     }
 
     .link:hover{
-        color:blue;
+        color:gold;
     }
 
     
@@ -29,17 +31,19 @@
     justify-content: space-between;
     align-items: center;
     padding: 5px;
-    background-color: rgb(199, 191, 191);
-    width: 400px;    
-    height: 100px;
+    border: 1px solid gold ;
+    background-color:black;
+    width: 500px;    
+    height: 120px;
     margin: 10px;
     .imagenTarjeta{
         margin-left: 5px;
-        width: 15%;
+        width: 14%;
         padding: 20px;
         .img {
             width: 100%;
             border-radius: 100%;
+            border: 0.5px solid gold;
         }
 
     }
@@ -56,13 +60,13 @@
     }
 
     .link{
-        color: #3f51b5;
+        color: white;
         text-decoration: none;
 
     }
 
     .link:hover{
-        color:blue;
+        color:gold;
     }
     @media (max-width: 576px) {
         width: 300px;    
