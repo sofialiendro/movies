@@ -27,6 +27,12 @@ const Latest = () => {
   const filtroPeliculasNuevas = determinarArrayNuevas(peliculaNueva)
   
   const useStyles=makeStyles((theme)=>({
+    Home:{
+      "@media (max-width: 700px)": {
+        textAlign:"center",
+
+    }
+  },
     text:{
         color:"#ffffff"
     }, 
@@ -34,14 +40,20 @@ const Latest = () => {
       display:'flex',
       flexWrap:'wrap',
       justifyContent:'space-between',
-      alignItems:'center'
+      alignItems:'center',
+      "@media (max-width: 700px)": {
+        justifyContent:"center",
+  
+       
+      
+      }
     },
 
     }));
   const classes=useStyles();
 
   return (
-    <div className="Home">
+    <div className={classes.Home}>
       <h1>Latest Movies</h1>
       <section className={classes.sectionLatest}>
         {filtroPeliculasNuevas.map(peliculaNueva =>
@@ -57,7 +69,7 @@ const Latest = () => {
         )}
       </section>
       
-      <Box bgcolor="#3f51b5" maxWidth="100%" height="100px" justify="center">
+      <Box bgcolor="#ff0000" maxWidth="100%" height="100px" justify="center">
         <Typography align="center" className={classes.text} variant="h5">
             Movie Finder by Euge and Sofi
         </Typography>

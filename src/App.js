@@ -27,9 +27,19 @@ const App = () => {
 
       flexGrow: 1,
     },
+    container:{
+     backgroundColor:"red",
+     height:"80px",
+
+  
+   
+
+    },
     navegation: {
       display: 'flex',
       justifyContent: 'flex-end',
+    
+     
     },
     navLink: {
       marginRight: theme.spacing(2),
@@ -39,6 +49,17 @@ const App = () => {
       '&:hover': {
         color: "white",
       },
+      "@media (max-width: 300px)": {
+        fontSize:"10px",
+       
+      
+      },
+      "@media (min-width: 700px)": {
+        fontSize:"20px",
+       
+      
+      }
+     
 
     },
     menuButton: {
@@ -47,16 +68,26 @@ const App = () => {
     title: {
 
       flexGrow: 1,
-      display: 'none',
+    
       [theme.breakpoints.up('sm')]: {
         display: 'block',
       },
+      "@media (max-width: 578px)": {
+        fontSize:"15px",
+        fontColor:"black"
+      
+      },
+     
+      
 
     },
     navLinkTitle: {
       textDecoration: 'none',
-      color:'white'
+      color:'white',
+      fontWeight:"bolder"
+      
     },
+  
 
   }));
   const classes = useStyles();
@@ -67,18 +98,18 @@ const App = () => {
         <div className="Nav">
           <div className={classes.root}>
 
-            <AppBar position="static" >
-              <Toolbar>
-                <Typography className={classes.title} variant="h6" noWrap>
+            <AppBar position="static" className={classes.container} >
+            <Toolbar>
+                <Typography className={classes.title}>
                   <Link className={classes.navLinkTitle} exact to="/" >Movie Finder</Link>
                 </Typography>
-                <Typography className={classes.title} variant="h6" noWrap>
+                <Typography className={classes.title}>
 
                   <Toolbar className={classes.navegation}>
-                    <Typography ><Link className={classes.navLink} exact to="/" >Home</Link></Typography>
-                    <Typography><Link className={classes.navLink} to="/Latest">Latest</Link></Typography>
-                    <Typography><Link className={classes.navLink} to="/Popular">Popular</Link></Typography>
-                    <Typography><Link className={classes.navLink} to="/Search">Search</Link></Typography>
+                  <Link className={classes.navLink} exact to="/" >Home</Link>
+                    <Link className={classes.navLink} to="/Latest">Latest</Link>
+                    <Link className={classes.navLink} to="/Popular">Popular</Link>
+                    <Link className={classes.navLink} to="/Search">Search</Link>
 
                   </Toolbar>
 
