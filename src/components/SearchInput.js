@@ -43,6 +43,13 @@ const SearchInput = ({ handleChange, valorDelInput }) => {
                 <input className={classes.input} value={valorDelInput} onChange={handleChange} />
 
             </div>
+
+
+            <Box bgcolor="#ff0000" maxWidth="100%" height="100px" justify="center">
+                <Typography align="center" className={classes.text} variant="h5">
+                Movie Finder by Euge and Sofi
+                </Typography>
+            </Box>
         </div>
     );
 
