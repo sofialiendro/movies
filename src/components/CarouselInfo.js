@@ -16,7 +16,7 @@ const CarouselInfo = ({ movieId, title, overview }) => {
       fontSize:"30px",
       fontStyle:"bold",
       "@media (max-width: 300px)": {
-        fontSize:"20px"
+        fontSize:"15px"
       }
      
 

@@ -42,7 +42,8 @@ const Search = () => {
             display: 'flex',
             flexWrap: 'wrap',
             justifyContent: 'space-between',
-            alignItems: 'center'
+            alignItems: 'center',
+           
         },
     }));
     const classes = useStyles();
