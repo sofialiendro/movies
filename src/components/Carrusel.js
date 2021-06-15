@@ -21,7 +21,7 @@ const Carousel = ({ movieInfo }) => {
   
 
   return (
-    <div className="w-auto" style={{ maxHeight: "900px" }}>
+    <div className="w-auto" style={{ maxHeight: "900px"}}>
       
 
       <Slider className="w-auto " {...settings}>

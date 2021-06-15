@@ -3,7 +3,8 @@
     text-align: center;
     width: 280px;    
     height: 450px;
-    margin: 10px;
+    margin: 10px; 
+
     font-size: 15px;
     img {
         width: 100%;
@@ -28,7 +29,6 @@
     justify-content: space-between;
     align-items: center;
     padding: 5px;
-    
     background-color: rgb(199, 191, 191);
     width: 400px;    
     height: 100px;
@@ -64,6 +64,16 @@
     .link:hover{
         color:blue;
     }
+    @media (max-width: 576px) {
+        width: 300px;    
+        height: 75px;
+        margin-right: 0;
+      }
+
+    @media (max-width: 300px) {
+        width: 250px;    
+        height: 60px;
+      }
  
 
 }
