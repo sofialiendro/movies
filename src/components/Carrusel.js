@@ -18,11 +18,11 @@ const Carousel = ({ movieInfo }) => {
     cssEase: "linear",
   };
 
-  
+
 
   return (
-    <div className="w-auto" style={{ maxHeight: "900px"}}>
-      
+    <div className="w-auto" style={{ maxHeight: "900px" }}>
+
 
       <Slider className="w-auto " {...settings}>
         {imgArray.map((part) => (

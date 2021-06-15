@@ -1,4 +1,3 @@
-
 import SearchInput from '../components/SearchInput';
 import InfoTarjeta from './InfoTarjeta';
 import React, { useState, useEffect } from 'react';
@@ -41,6 +40,10 @@ const Search = () => {
             flexWrap: 'wrap',
             justifyContent: 'space-between',
             alignItems: 'center',
+            "@media (max-width: 540px)": {
+               justifyContent:"center"
+                
+            }
            
         },
     }));

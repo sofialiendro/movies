@@ -2,18 +2,14 @@
 import Home from './components/Home';
 import Latest from './components/Latest';
 import Popular from './components/Popular';
-
 import Detalle from './views/Detalle';
 import Search from './views/Search';
 import React from 'react';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import InputBase from '@material-ui/core/InputBase';
-import { fade, makeStyles } from '@material-ui/core/styles';
-import SearchIcon from '@material-ui/icons/Search';
+import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
-import { Navbar } from 'reactstrap';
 
 
 
@@ -25,19 +21,14 @@ const App = () => {
 
       flexGrow: 1,
     },
-    container:{
-     backgroundColor:"red",
-     height:"80px",
-
-  
-   
-
+    container: {
+      backgroundColor: "red",
+      height: "80px",
     },
     navegation: {
       display: 'flex',
       justifyContent: 'flex-end',
-    
-     
+
     },
     navLink: {
       marginRight: theme.spacing(2),
@@ -48,17 +39,14 @@ const App = () => {
         color: "white",
       },
       "@media (max-width: 300px)": {
-        fontSize:"10px",
-       
-      
+        fontSize: "10px",
+
+
       },
       "@media (min-width: 700px)": {
-        fontSize:"20px",
-       
-      
-      }
-     
+        fontSize: "20px",
 
+      }
     },
     menuButton: {
       marginRight: theme.spacing(2),
@@ -66,26 +54,24 @@ const App = () => {
     title: {
 
       flexGrow: 1,
-    
+
       [theme.breakpoints.up('sm')]: {
         display: 'block',
       },
       "@media (max-width: 578px)": {
-        fontSize:"15px",
-        fontColor:"black"
-      
+        fontSize: "15px",
+        fontColor: "black"
+
       },
-     
-      
 
     },
     navLinkTitle: {
       textDecoration: 'none',
-      color:'white',
-      fontWeight:"bolder"
-      
+      color: 'white',
+      fontWeight: "bolder"
+
     },
-  
+
 
   }));
   const classes = useStyles();
@@ -97,14 +83,14 @@ const App = () => {
           <div className={classes.root}>
 
             <AppBar position="static" className={classes.container} >
-            <Toolbar>
+              <Toolbar>
                 <Typography className={classes.title}>
                   <Link className={classes.navLinkTitle} exact to="/" >Movie Finder</Link>
                 </Typography>
                 <Typography className={classes.title}>
 
                   <Toolbar className={classes.navegation}>
-                  <Link className={classes.navLink} exact to="/" >Home</Link>
+                    <Link className={classes.navLink} exact to="/" >Home</Link>
                     <Link className={classes.navLink} to="/Latest">Latest</Link>
                     <Link className={classes.navLink} to="/Popular">Popular</Link>
                     <Link className={classes.navLink} to="/Search">Search</Link>
@@ -117,9 +103,6 @@ const App = () => {
               </Toolbar>
             </AppBar>
 
-
-
-
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/Latest" component={Latest} />
@@ -130,9 +113,6 @@ const App = () => {
 
 
             </Switch>
-
-
-
 
           </div>
         </div>

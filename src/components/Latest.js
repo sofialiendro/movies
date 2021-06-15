@@ -1,56 +1,44 @@
 import InfoTarjeta from '../views/InfoTarjeta';
-
-import { URL_NEW_MOVIES, APIKEY } from '../utils/variables'
-import useFetch from '../hooks/useFetch'
-
+import { URL_NEW_MOVIES, APIKEY } from '../utils/variables';
+import useFetch from '../hooks/useFetch';
+import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-
 import Box from '@material-ui/core/Box';
-
-import {makeStyles} from '@material-ui/core/styles'
 
 
 const determinarArrayNuevas = (array) => {
-    return array.slice(0, 20)
- }
- 
+  return array.slice(0, 20)
+}
+
 
 const Latest = () => {
 
-
-  
-  const peliculaNueva = useFetch (`${URL_NEW_MOVIES}api_key=${APIKEY}`)
-
-
-
-  
+  const peliculaNueva = useFetch(`${URL_NEW_MOVIES}api_key=${APIKEY}`)
   const filtroPeliculasNuevas = determinarArrayNuevas(peliculaNueva)
-  
-  const useStyles=makeStyles((theme)=>({
-    Home:{
-      "@media (max-width: 700px)": {
-        textAlign:"center",
 
-    }
-  },
-    text:{
-        color:"#ffffff"
-    }, 
-    sectionLatest:{
-      display:'flex',
-      flexWrap:'wrap',
-      justifyContent:'space-between',
-      alignItems:'center',
+  const useStyles = makeStyles((theme) => ({
+    Home: {
+      color: "white",
       "@media (max-width: 700px)": {
-        justifyContent:"center",
-  
-       
-      
+        textAlign: "center",
+
+      }
+    },
+    text: {
+      color: "#ffffff"
+    },
+    sectionLatest: {
+      display: 'flex',
+      flexWrap: 'wrap',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      "@media (max-width: 700px)": {
+        justifyContent: "center",
       }
     },
 
-    }));
-  const classes=useStyles();
+  }));
+  const classes = useStyles();
 
   return (
     <div className={classes.Home}>
@@ -60,7 +48,7 @@ const Latest = () => {
           <InfoTarjeta
             viewType='InfoTarjeta'
             key={peliculaNueva.id}
-            id ={peliculaNueva.id}
+            id={peliculaNueva.id}
             image={peliculaNueva.poster_path}
             title={peliculaNueva.title}
             type='movie'
@@ -68,13 +56,13 @@ const Latest = () => {
           />
         )}
       </section>
-      
+
       <Box bgcolor="#ff0000" maxWidth="100%" height="100px" justify="center">
         <Typography align="center" className={classes.text} variant="h5">
-            Movie Finder by Euge and Sofi
+          Movie Finder by Euge and Sofi
         </Typography>
       </Box>
-      
+
     </div>
   )
 }
