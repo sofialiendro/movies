@@ -25,7 +25,12 @@ const Latest = () => {
       }
     },
     text: {
-      color: "#ffffff"
+      color: "#ffffff",
+      padding: "1%",
+      fontSize: "25px",
+    "@media (max-width: 414px)": {
+        fontSize: "15px"
+      }
     },
     sectionLatest: {
       display: 'flex',
@@ -41,6 +46,7 @@ const Latest = () => {
   const classes = useStyles();
 
   return (
+  
     <div className={classes.Home}>
       <h1>Latest Movies</h1>
       <section className={classes.sectionLatest}>
@@ -57,13 +63,15 @@ const Latest = () => {
         )}
       </section>
 
-      <Box bgcolor="#ff0000" maxWidth="100%" height="100px" justify="center">
+      <Box bgcolor="#ff0000" width="100%" height="100px" 
+      justifyContent="center" alignItems="center">
         <Typography align="center" className={classes.text} variant="h5">
           Movie Finder by Euge and Sofi
         </Typography>
       </Box>
 
     </div>
+  
   )
 }
 

@@ -1,8 +1,10 @@
 import SearchInput from '../components/SearchInput';
 import InfoTarjeta from './InfoTarjeta';
 import React, { useState, useEffect } from 'react';
-import {makeStyles} from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import { APIKEY } from '../utils/variables'
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
 
 
 
@@ -25,7 +27,7 @@ const Search = () => {
             .then(res => res.json())
             .then(data => {
 
-                if (data.results != undefined) {
+                if (data.results !== undefined) {
                     setPeliculas(data.results)
                 }
 
@@ -41,17 +43,25 @@ const Search = () => {
             justifyContent: 'space-between',
             alignItems: 'center',
             "@media (max-width: 540px)": {
-               justifyContent:"center"
-                
+                justifyContent: "center"
+
             }
-           
+
         },
+        text: {
+            color: "#ffffff",
+            padding: "1%",
+            fontSize: "25px",
+          "@media (max-width: 414px)": {
+              fontSize: "15px"
+            }
+          },
     }));
     const classes = useStyles();
 
 
     return (
-        <>
+        <div>
             <SearchInput
                 valorDelInput={valorDelInput}
                 handleChange={handleChange}
@@ -70,11 +80,16 @@ const Search = () => {
 
                     />
                 )}
-
-
+              
             </section>
 
-        </>
+            <Box bgcolor="#ff0000" width="100%" height="100px" display="flex"
+            position= "fixed" bottom="0" justifyContent="center" alignItems="center">
+                    <Typography className={classes.text} >
+                        Movie Finder by Euge and Sofi
+                    </Typography>
+                </Box>
+        </div>
 
     );
 }
