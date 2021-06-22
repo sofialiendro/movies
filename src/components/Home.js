@@ -19,9 +19,10 @@ const Home = () => {
   const filtroPeliculas = determinarArray(peliculas)
   const filtroMejoresPeliculas = determinarArray(mejoresPeliculas)
 
-
+// siempre declaren el estado arriba de todo, apenas inicia el componente
   const [latest, setLatest] = useState([]);
 
+  // por que no usan su hook custom aca?
   useEffect(() => {
     fetch(
       `https://api.themoviedb.org/3/movie/now_playing?api_key=ddc431acb0e32208ae440feadb8c3681`
@@ -32,7 +33,8 @@ const Home = () => {
       });
   }, []);
 
-
+// pongan los estilos *fuera* del componente, ya que si no cargan en cada render y pueden 
+// hacer que su pagina funcione mas lento
   const useStyles = makeStyles((theme) => ({
     text: {
       color: "#ffffff",
@@ -64,6 +66,7 @@ const Home = () => {
       <div className={classes.content}>
         <section>
 
+{/* esto deberia ser un h2. recuerden, un solo h1 por pagina! */}
           <h1 className={classes.title}>Popular Movies</h1>
           {filtroPeliculas.map(pelicula =>
             <InfoTarjeta
@@ -97,6 +100,9 @@ const Home = () => {
       </div>
 
 
+{/* 
+si pusieran esto en App, no necesitarian repetirlo en los demas componentes. 
+ademas, deberia tener la etiqueta Footer */}
       <Box bgcolor="#ff0000" width="100%" height="100px"  display="flex" 
       justifyContent="center" alignItems="center">
         <Typography className={classes.text} >

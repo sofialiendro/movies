@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 
+// este hook espera dos parametros, pero ustedes le estan pasando solo url. ojo!
+// funciona, pero borren ese segundo param que no se usa
 const useFetch = (url, apikey) => {
 
 const [peliculas, setPeliculas] = useState ([])

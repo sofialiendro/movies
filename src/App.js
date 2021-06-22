@@ -40,7 +40,7 @@ const App = () => {
       },
       "@media (max-width: 300px)": {
         fontSize: "11px",
-
+// ojo con los espacios que quedan aqui tirados, dificultan la lectura
 
       },
       "@media (min-width: 700px)": {
@@ -82,9 +82,10 @@ const App = () => {
   return (
     <div className="App">
       <BrowserRouter>
+
+      {/* la nav deberia ser su propio componente */}
         <div className="Nav">
           <div className={classes.root}>
-
             <AppBar position="static" className={classes.container} >
               <Toolbar>
                 <Typography className={classes.title}>
